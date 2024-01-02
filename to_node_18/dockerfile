@@ -1,0 +1,29 @@
+# 使用 Node.js 18 的 official image
+FROM node:18
+
+# 設定工作目錄，例如 /app
+WORKDIR /app
+
+RUN apt-get update -y && \
+    apt-get upgrade -y && \
+    apt-get install -y \
+    build-essential -y \
+    curl \
+    nmap \
+    git \
+    nano \
+    && rm -rf /var/lib/apt/lists/*
+
+# 將程式碼複製到容器內的工作目錄
+# COPY package*.json ./
+
+# 安裝相依套件
+# RUN npm install
+
+COPY . .
+
+# 暴露應用程式的埠，如果需要的話
+EXPOSE 3000
+
+# 預設執行的指令，例如啟動你的應用程式
+# CMD ["npm", "start"]
