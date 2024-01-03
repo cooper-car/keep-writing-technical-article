@@ -25,7 +25,7 @@ https://www.docker.com/products/docker-desktop/
 
 ### 2. 進入鯨魚王的世界
 
-### 打開 IDE (這邊用vscode)
+### 打開 IDE
 ```
 開啟 backendweb 的 code，並打開 terminal
 ```
@@ -42,6 +42,12 @@ docker build -t node-app:18 .
 docker run -it -d -v $(pwd):/app -p 3000:3000 --name backend-node18  node-app:18
 ```
 ![Alt text](<CleanShot 2024-01-03 at 14.30.51@2x.jpg>)
+
+### Shows running containers ( 查 CONTAINER_ID )
+```
+docker ps
+```
+
 ### Access to the container
 ```
 docker exec -it {CONTAINER_ID} bash
