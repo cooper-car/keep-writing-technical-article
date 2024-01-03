@@ -12,14 +12,14 @@
    依照官方文件調整 apache configuration
    
 - phpMyAdmin
-     ``` bash
-        download {name}.pem key (透過console下載)
-        - chmod 600 {name}.pem
-        - ssh -N -L 8888:127.0.0.1:80 -i {name}.pem bitnami@{server-ip}
-        - 貼上 http://127.0.0.1:8888/phpmyadmin 就會看到畫面摟
-        - migrate database schema
-     ```
-     
+    ``` bash
+    1. download {name}.pem key (透過console下載)
+    2. chmod 600 {name}.pem
+    3. ssh -N -L 8888:127.0.0.1:80 -i {name}.pem bitnami@{server-ip}
+    4. 貼上 http://127.0.0.1:8888/phpmyadmin 就會看到畫面摟
+    5. migrate database schema
+    ```
+
 - Laravel
     - 下載相依套件 
         ``` php
