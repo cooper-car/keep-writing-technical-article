@@ -31,7 +31,9 @@ https://www.docker.com/products/docker-desktop/
 ```
 
 ### Build image
-```
+```go
+// Tag an image (-t, --tag)
+// The repository name will be node-app and the tag will be 18
 docker build -t node-app:18 .
 ```
 
@@ -39,7 +41,7 @@ docker build -t node-app:18 .
 ```
 docker run -it -d -v $(pwd):/app -p 3000:3000 --name backend-node18  node-app:18
 ```
-
+![Alt text](<CleanShot 2024-01-03 at 14.30.51@2x.jpg>)
 ### Access to the container
 ```
 docker exec -it {CONTAINER_ID} bash
