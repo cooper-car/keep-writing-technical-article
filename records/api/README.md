@@ -94,4 +94,4 @@ console.log(errorMessage);
 - 一個語系對應一個 file
 - 每個語系 file 下面對一個 module 的錯誤訊息
 
-![img](<CleanShot 2023-12-20.jpg>)
+  ![img](<CleanShot 2024-01-06.jpg>)
