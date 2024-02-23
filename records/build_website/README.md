@@ -44,6 +44,13 @@
   - 把 Name servers 資訊貼到購買網址的後台
   - create DNS records & SSL憑證
     - 參考這部影片： https://www.youtube.com/watch?v=LDVQhN7zJvQ
+   
+- Renew The Let’s Encrypt Certificate
+   ``` bash
+   sudo /opt/bitnami/ctlscript.sh stop
+   sudo /opt/bitnami/letsencrypt/lego --tls --email="{e-mail}" --domains="{domain}" --path="/opt/bitnami/letsencrypt" renew --days 90
+   sudo /opt/bitnami/ctlscript.sh start
+   ```
   
 ### Trouble Shooting
 - Laravel遇到權限上的問題\
